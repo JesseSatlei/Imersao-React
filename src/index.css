@@ -6,13 +6,13 @@
 
 :root {
   --primary: #2A7AE4;
-  --black: #000000;
+  --black: #000000e8;
   --blackLighter: #9E9E9E;
   --grayLight: #F5F5F5;
   --grayMedium: #e5e5e5; 
-  --white: #FFFFFF;
+  --white: #ffffffda;
   --frontEnd: #6BD1FF;
-  --backEnd: #00C86F;
+  --backEnd: #00c86ed7;
 }
 
 html,
