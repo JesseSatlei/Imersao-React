@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../../assets/img/Logo.png';
 import './Menu.css';
 import Button from '../Button';
@@ -8,11 +9,11 @@ function Menu() {
   return (
     <header>
       <nav className="Menu">
-        <a href="#">
+        <Link to="/">
           <img className="Logo" src={Logo} alt="JeFlix Logo"/>
-        </a>
+        </Link>
         {/*'as' serve para dizer como a tag irá se comportar, nesse caso um <button> se comportará como um <a>*/}
-        <Button as="a" className="ButtonLink" href="/">
+        <Button as={Link} className="ButtonLink" to="/cadastro/video">
           Novo Vídeo
         </Button>
       </nav>

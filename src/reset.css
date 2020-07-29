@@ -1,4 +1,3 @@
-/*padrão*/
 * {
   box-sizing: border-box;
   font-family: 'Fredoka One', cursive, 'Roboto', sans-serif;
@@ -24,4 +23,9 @@ body {
 a {
   color: inherit;
 }
-/*fim do padrão*/
+
+#root {
+  min-height: calc(100vh - var(--bodyPaddingTop));
+  display: flex;
+  flex-direction: column;
+}
