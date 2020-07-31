@@ -45,6 +45,12 @@ Tentar criar um card para mostrar isso com styled components;
 
 Entender o protocolo HTTP, aprender como enviar e buscar dados de um back-end, adicionar suporte de validação em nossos campos e colocar a cópia do seu projeto no ar
 
+### Desafio
+
+Variar a animação do form com a propriedade transform
+
+Tentar cadastrar uma categoria
+
 ## Dia 5
 **Formulário de cadastro e remoção de vídeos:**
 
@@ -69,3 +75,11 @@ React Slick - Biblioteca React para criação de Carousel - https://react-slick.
 Fonts Google - Lugar onde pode pegar fonte diretamente desenvolvidas pelo Google - https://fonts.google.com/
 
 Fontmeme - Site onde pode criar sua propria logo - https://fontmeme.com/netflix-font/
+
+ESlint - biblioteca utilizada para melhor pradonização do código - https://eslint.org/
+
+Prop-Types - biblioteca utilizada pelo ESlint - https://www.npmjs.com/package/prop-types
+
+Json-Server - biblioteca para dados Fake - https://github.com/typicode/json-server
+
+Concurrently - Permite rodar depois comandos que bloqueia o terminal ao mesmo tempo - https://www.npmjs.com/package/concurrently

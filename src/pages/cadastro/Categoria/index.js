@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
-import PageDefault from '../../../components/PageDefault';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
+import Button from '../../../components/Button';
 
 function CadastroCategoria() {
-  // Está sendo desistruturado o objeto colocando o [] antes do =, se trabalha com três valores abaixo, nome, a função que altera o nome e o valor padrão.
+  // Está sendo desistruturado o objeto colocando o [] antes do =,
+  // se trabalha com três valores abaixo, nome, a função que altera o nome e o valor padrão.
   const valoresIniciais = {
     nome: '',
     descricao: '',
-    cor: ''
-  }
+    cor: '',
+  };
   const [categorias, setCategorias] = useState([]);
   const [values, setValues] = useState(valoresIniciais);
 
@@ -21,26 +23,46 @@ function CadastroCategoria() {
   }
 
   function handleChange(infoEvento) {
-    //const { getAttribute, value } = infoEvento.target;
+    // const { getAttribute, value } = infoEvento.target;
     setValue(
       infoEvento.target.getAttribute('name'),
-      infoEvento.target.value
+      infoEvento.target.value,
     );
   }
+  // Utilizado quando quer que algo colateral aconteça
+  useEffect(() => {
+    if (window.location.href.includes('localhost')) {
+      const URL = 'http://localhost:8080/categorias';
+      fetch(URL)
+        .then(async (res) => {
+          if (res.ok) {
+            const resServer = await res.json();
+            setCategorias(resServer);
+            return;
+          }
+          throw new Error('Não foi possível pegar os dados');
+        });
+    }
+  }, []);
 
   return (
     <PageDefault>
-      <h1>Cadastrar Categoria: {values.nome}</h1>
+      <h1>
+        Cadastrar Categoria:
+        {values.nome}
+      </h1>
 
       <form onSubmit={function handleSubmit(infoEvento) {
         infoEvento.preventDefault();
         setCategorias([
           ...categorias,
-          values
+          values,
         ]);
 
-        setValues(valoresIniciais); //utilizado para toda vez que cadastrar uma categoria, limpar os campos
-      }}>
+        // utilizado para limpar os campos quando inserir um novo dado
+        setValues(valoresIniciais);
+      }}
+      >
         <FormField
           label="Nome da Categoria: "
           type="text"
@@ -50,7 +72,7 @@ function CadastroCategoria() {
         />
         <FormField
           label="Descrição: "
-          type="text"
+          type="textarea"
           name="descricao"
           value={values.descricao}
           onChange={handleChange}
@@ -62,52 +84,23 @@ function CadastroCategoria() {
           value={values.cor}
           onChange={handleChange}
         />
-        {/* <div>
-          <label>
-            Nome da Categoria:
-            <input
-              type="text"
-              name="nome"
-              value={values.nome}
-              onChange={handleChange}
-            />
-          </label>
-        </div> */}
-        {/* <div>
-          <label>
-            Descrição:
-            <textarea
-              type="text"
-              name="descricao"
-              value={values.descricao}
-              onChange={handleChange}
-            />
-          </label>
-        </div> */}
-        {/* <div>
-          <label>
-            Cor:
-            <input
-              type="color"
-              name="cor"
-              value={values.cor}
-              onChange={handleChange}
-            />
-          </label>
-        </div> */}
-        <button>
+        <Button>
           Cadastrar
-        </button>
+        </Button>
       </form>
 
+      {categorias.length === 0 && (
+        <div>
+          Loading....
+        </div>
+      )}
+
       <ul>
-        {categorias.map((categoria, indice) => {
-          return (
-            <li key={`${categoria}${indice}`}>
-              {categoria.nome}
-            </li>
-          )
-        })}
+        {categorias.map((categoria, indice) => (
+          <li key={`${categoria}${indice}`}>
+            {categoria.nome}
+          </li>
+        ))}
       </ul>
 
       <Link to="/">
