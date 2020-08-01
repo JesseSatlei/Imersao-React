@@ -31,8 +31,8 @@ function CadastroCategoria() {
   }
   // Utilizado quando quer que algo colateral aconteça
   useEffect(() => {
-    if (window.location.href.includes('localhost')) {
-      const URL = 'http://localhost:8080/categorias';
+    if (window.location.href.includes('localhost') || '') {
+      const URL = window.location.href.includes('localhost') ? 'http://localhost:8080/categorias' : 'https://devjeflix.herokuapp.com/categorias';
       fetch(URL)
         .then(async (res) => {
           if (res.ok) {
@@ -89,16 +89,10 @@ function CadastroCategoria() {
         </Button>
       </form>
 
-      {categorias.length === 0 && (
-        <div>
-          Loading....
-        </div>
-      )}
-
       <ul>
-        {categorias.map((categoria, indice) => (
-          <li key={`${categoria}${indice}`}>
-            {categoria.nome}
+        {categorias.map((categoria) => (
+          <li key={`${categoria.id}`}>
+            {categoria.titulo}
           </li>
         ))}
       </ul>
