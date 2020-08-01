@@ -2,16 +2,16 @@
   "categorias": [
     {
       "id": 1,
-      "titulo": "Front End",
+      "titulo": "Animes",
       "cor": "#6BD1FF",
       "link_extra": {
-        "text": "Formação de Front End na Alura",
-        "url": "https://www.alura.com.br/cursos-online-front-end"
+        "text": "Melhor canal de ANIMES!!!",
+        "url": "https://www.youtube.com/channel/UChNEgYpqNbXXM8lnWAx4aIQ/videos"
       }
     },
     {
       "id": 2,
-      "titulo": "Back End",
+      "titulo": "Programação",
       "cor": "#00C86F",
       "link_extra": {
         "text": "Cursos de Back End na Alura",
@@ -30,15 +30,19 @@
     {
       "id": 4,
       "titulo": "Filmes",
-      "cor": "orange"
+      "cor": "orange",
+      "link_extra": {
+        "text": "Tudo que um homem precisa é de uma coca gelada e um bom filme",
+        "url": "#"
+      }
     },
     {
       "id": 5,
       "titulo": "Games",
       "cor": "red",
       "link_extra": {
-        "text": "Formação de Jogos na Alura",
-        "url": "https://www.alura.com.br/cursos-online-front-end"
+        "text": "Os jogos nunca param, então continue tentando",
+        "url": "#"
       }
     }
   ],
@@ -46,44 +50,26 @@
     {
       "id": 1,
       "categoriaId": 1,
-      "titulo": "SEO com React",
-      "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+      "titulo": "O começo",
+      "url": "https://www.youtube.com/watch?v=HHsP9RGWJ6Q"
     },
     {
       "id": 2,
       "categoriaId": 1,
-      "titulo": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
-      "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
+      "titulo": "Boku no Hero, indico ou não?",
+      "url": "https://www.youtube.com/watch?v=Qz5Pn3zTW8w"
     },
     {
       "id": 3,
       "categoriaId": 1,
-      "titulo": "Componentização com VanillaJS #AluraMais",
-      "url": "https://www.youtube.com/watch?v=LatCKpcOMak"
+      "titulo": "O Sol se Desintegrou!",
+      "url": "https://www.youtube.com/watch?v=08MR3Ki1aaU"
     },
     {
       "id": 4,
       "categoriaId": 1,
-      "titulo": "Pare de chutar e aprenda a display: inline #01",
-      "url": "https://www.youtube.com/watch?v=5PS6ku8NzIE"
-    },
-    {
-      "id": 5,
-      "categoriaId": 1,
-      "titulo": "Template String: Interpolando strings com JavaScript #AluraMais",
-      "url": "https://www.youtube.com/watch?v=ORI_HTXaIw0"
-    },
-    {
-      "id": 6,
-      "categoriaId": 1,
-      "titulo": "Qual é a melhor linguagem de programação? #HipstersPontoTube",
-      "url": "https://www.youtube.com/watch?v=Uh-GNH-t89w"
-    },
-    {
-      "id": 7,
-      "categoriaId": 1,
-      "titulo": "Novidades do Angular v9",
-      "url": "https://www.youtube.com/watch?v=34uHo7hFmG0"
+      "titulo": "Sword art Online",
+      "url": "https://www.youtube.com/watch?v=H0iHjwbP5nw"
     },
     {
       "id": 8,
@@ -148,8 +134,8 @@
     {
       "id": 18,
       "categoriaId": 4,
-      "titulo": "Gattaca",
-      "url": "https://www.youtube.com/watch?v=Dl0tYLbrhhs"
+      "titulo": "Star Wars",
+      "url": "https://www.youtube.com/watch?v=8Qn_spdM5Zg"
     },
     {
       "id": 19,
@@ -160,8 +146,8 @@
     {
       "id": 20,
       "categoriaId": 4,
-      "titulo": "Feitiço do Tempo",
-      "url": "https://www.youtube.com/watch?v=zi8d69P9NvI"
+      "titulo": "No game no life:zero",
+      "url": "https://www.youtube.com/watch?v=quj8sK3Phh8"
     },
     {
       "id": 21,
