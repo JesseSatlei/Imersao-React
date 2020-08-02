@@ -12,6 +12,18 @@ function getAllWithVideos() {
     });
 }
 
+function getAll() {
+  return fetch(`${URL_CATEGORIES}`)
+    .then(async (res) => {
+      if (res.ok) {
+        const resServer = await res.json();
+        return resServer;
+      }
+      throw new Error('Não foi possível pegar os dados');
+    });
+}
+
 export default {
   getAllWithVideos,
+  getAll,
 };
